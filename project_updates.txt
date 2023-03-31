@@ -1,0 +1,102 @@
+file updates:
+
+[NOTE: v.0.1 are all cycle 5
+v.0.2 are all cycle 6
+v.0.3 are all cycle 7]
+
+v.0.1.0
+10/27/2022
+--------
+Setup file added.
+--------
+v.0.1.1
+10/28/2022
+--------
+dependent package pylint added to setuptools
+--------
+v.0.1.2
+10/30/2022
+--------
+pylint feedback added to codeServer.py
+--------
+v.0.1.3
+10/31/2022
+--------
+a persistent storage was implemented
+--------
+v.0.1.4
+11/02/2022
+--------
+pylint feedback updated.
+unittesting for persistent storage made (utiltest.py file in main folder)
+--------
+v.0.2.1
+11/14/2022
+--------
+refactored codeServer into flask framework.
+setup now includes flask.
+DRY and SOLID methods were ensured.
+Every structure has a single responsibility.
+Nothing repeated.
+DIP is not violaated.
+ISP is not violated. No redundant methods that aren't used.
+LSP is not violated
+--------
+v.0.2.2
+11/18/2022
+--------
+added unittest file for testing codeServer.py flask enpoint routing.
+DRY and SOLID methods were ensured.
+Every structure has a single responsibility.
+Nothing repeated.
+DIP is not violaated.
+ISP is not violated. No redundant methods that aren't used.
+LSP is not violated
+--------
+v.0.2.3
+11/19/2022
+--------
+added testing for persist storage task.
+--------
+v.0.2.4
+11/20/2022
+--------
+separated template module into a new file named my_templates
+added testing for the template module task.
+DRY and SOLID methods were ensured.
+Every structure has a single responsibility.
+Nothing repeated.
+DIP is not violaated.
+ISP is not violated. No redundant methods that aren't used.
+LSP is not violated
+---------
+v.0.3.1
+11/25/2022
+----------
+added numpy as a required package in setup.py
+modified base_template1 in my_templates.py to have some numpy exercises and a button to show the solutions to the exercises.
+added base_template2 in my_templates.py which is a webpage to show the solutions of the numpy exercises.
+added a numpy_solve() method to load up the base_template2 when "Solutions" button is pressed.
+added a unittesting method test_numpySolPage to test the numpy task implemented by jabhuiyan.
+
+DRY and SOLID methods were ensured.
+Every structure has a single responsibility.
+Nothing repeated.
+DIP is not violaated.
+ISP is not violated. No redundant methods that aren't used.
+LSP is not violated
+
+---------
+v.0.3.2
+11/29/2022
+----------
+modified test methods to reflect new additions of Save Revert Button
+added log_data module to log lookup/run/save/revert buttons.
+modified base_template1 to add user instructions.
+
+DRY and SOLID methods were ensured.
+Every structure has a single responsibility.
+Nothing repeated.
+DIP is not violaated.
+ISP is not violated. No redundant methods that aren't used.
+LSP is not violated
