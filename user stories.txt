@@ -1,0 +1,23 @@
+User stories:
+
+1) Carson is a third year computer science student using python
+to create a persistent Python interpreter on a webServer as a group project. Carson
+has implemented a method that outputs the Pylint feedback for a given module below the
+standard output of the interpreter. At the moment, the code is stored in a string variable
+and not a module, which presented some difficulties in running Pylint on the actual given code.
+His plan is to update this method so that the string contents are put into a new module
+which can then be called by Pylint’s Run() method, which will display the feedback on the
+provided code, rather than the codeServer module itself (which was essentially a stub implementation). This method can also be further decoupled by moving it’s methods into it’s
+own module.
+
+
+2) Aneesh is a Final year computer science student who is creating a persistent Python interpreter on a webserver with his teammates. 
+Aneesh is working on the persistence storage of the program where the code entered in the intrepreter will be stored persistently
+and can be seen on the webserver when the user opens it the next time. He has implemented a module called util to be able to do this.
+At present, the persistence only saves the last ran code but he is looking to have all the codes ran by the user saved for easy access. 
+He is trying to implement this by creating user/password page in the webserver so that all codes ran by an user can be retreived.
+
+
+3) Jubaer is trying to learn some basic data science works in the summer vacation. He hears numpy is a good library to get started with. He wants to
+practice using numpy as a beginner in the codeServer. There are some beginner level questions he can choose from should he feel the need to test himself
+while practicing.
