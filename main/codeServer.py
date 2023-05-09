@@ -2,7 +2,6 @@
 """codeServer is a simple server which can be used to practice
 Python code.
 Attributions:
-1. by <Jubaer Ahmed, Aneesh Raghupathy, Carson Thorne>,<November 18th, 2022>
 2. https://pylint.pycqa.org/en/v2.13.9/user_guide/run.html#
 3. https://flask.palletsprojects.com/en/1.1.x/quickstart/
 """
@@ -10,8 +9,6 @@ import os
 from io import StringIO
 from subprocess import PIPE, STDOUT, run
 from flask import Flask, request
-from pylint.lint import Run
-from pylint.reporters.text import TextReporter
 import my_templates
 import log_data
 
@@ -52,20 +49,6 @@ def writefile(file, data):
 # -----------------------
 
 
-def pylint_output(module_name):
-    """
-    pylint_output(module_name)
-    Takes the name of a module and runs pylint on its code.
-    :param module_name: the name of the module to be linted.
-    :return: a string of pylint's feedback-output
-    """
-    pylnt_output = StringIO()  # Custom open stream
-    reporter = TextReporter(pylnt_output)
-    Run([module_name], reporter=reporter, do_exit=False)
-    pylnt_txt = str(pylnt_output.getvalue())  # Retrieve the text report and cast as str
-    return pylnt_txt
-
-
 @app.route('/')
 def do_get():
     """
@@ -88,9 +71,7 @@ def do_post():
     log_data.log_event(username, 'RUN', code)
     my_prgm = run("python", stdout=PIPE, shell=True, stderr=STDOUT, input=code, encoding='ascii')
     output = my_prgm.stdout
-    pylnt_txt = pylint_output("codeServer.py")
-    outp_w_pylint = output + "\nPylint output: \n" + pylnt_txt
-    page = base_template.replace('<!-- OUTPUT PLACEHOLDER -->', str(outp_w_pylint))
+    page = base_template.replace('<!-- OUTPUT PLACEHOLDER -->', str(output))
 
     return page.replace("usercode", username)
 
