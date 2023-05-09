@@ -4,7 +4,6 @@ import os
 
 """
 Test if codeServer flask endpoint routing runs properly.
-Tests implemented by: jabhuiyan, anseesh and carson
 """
 
 
