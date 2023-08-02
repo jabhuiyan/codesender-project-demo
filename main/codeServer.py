@@ -2,8 +2,8 @@
 """codeServer is a simple server which can be used to practice
 Python code.
 Attributions:
-2. https://pylint.pycqa.org/en/v2.13.9/user_guide/run.html#
-3. https://flask.palletsprojects.com/en/1.1.x/quickstart/
+1. https://pylint.pycqa.org/en/v2.13.9/user_guide/run.html#
+2. https://flask.palletsprojects.com/en/1.1.x/quickstart/
 """
 import os
 from io import StringIO
